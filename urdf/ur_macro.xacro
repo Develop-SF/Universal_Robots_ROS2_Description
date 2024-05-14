@@ -67,7 +67,7 @@
     safety_limits:=false
     safety_pos_margin:=0.15
     safety_k_position:=20
-    use_fake_hardware:=false
+    hardware_type:=ros2
     fake_sensor_commands:=false
     sim_gazebo:=false
     sim_ignition:=false
@@ -111,7 +111,7 @@
       <!-- ros2 control instance -->
       <xacro:ur_ros2_control
         name="${name}"
-        use_fake_hardware="${use_fake_hardware}"
+        hardware_type="${hardware_type}"
         initial_positions="${initial_positions}"
         fake_sensor_commands="${fake_sensor_commands}"
         headless_mode="${headless_mode}"
