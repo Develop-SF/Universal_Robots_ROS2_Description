@@ -34,6 +34,7 @@
         </xacro:if>
         <xacro:if value="${hardware_type == 'fake'}">
           <plugin>mock_components/GenericSystem</plugin>
+          <param name="tf_prefix">${tf_prefix}</param>
           <param name="fake_sensor_commands">${fake_sensor_commands}</param>
           <param name="state_following_offset">0.0</param>
         </xacro:if>
