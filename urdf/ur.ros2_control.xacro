@@ -45,8 +45,9 @@
         </xacro:if>
         <xacro:if value="${hardware_type == 'ros1'}">
           <plugin>topic_based_ros2_control/TopicBasedSystem</plugin>
-          <param name="joint_commands_topic">/ra_trajectory_controller/command</param>
-          <param name="joint_states_topic">/ra_trajectory_controller/state</param>
+          <param name="tf_prefix">${tf_prefix}</param>
+          <param name="joint_commands_topic">/${tf_prefix}topic_based/command</param>
+          <param name="joint_states_topic">/${tf_prefix}topic_based/state</param>
         </xacro:if>
         <xacro:unless value="${hardware_type != 'ros2' or sim_gazebo or sim_ignition}">
           <plugin>ur_robot_driver/URPositionHardwareInterface</plugin>
