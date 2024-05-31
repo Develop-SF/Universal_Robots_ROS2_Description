@@ -47,7 +47,7 @@
           <plugin>topic_based_ros2_control/TopicBasedSystem</plugin>
           <param name="tf_prefix">${tf_prefix}</param>
           <param name="joint_commands_topic">/${tf_prefix}topic_based/command</param>
-          <param name="joint_states_topic">/ros1_joint_states</param>
+          <param name="joint_states_topic">/ros1/joint_states</param>
         </xacro:if>
         <xacro:unless value="${hardware_type != 'ros2' or sim_gazebo or sim_ignition}">
           <plugin>ur_robot_driver/URPositionHardwareInterface</plugin>
